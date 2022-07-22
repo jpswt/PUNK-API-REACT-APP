@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/BeerCard.css';
+import '../components/BeerCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faHeartInactive } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartActive } from '@fortawesome/free-solid-svg-icons';
@@ -21,12 +21,12 @@ const BeerCard = (props) => {
 				</h3>
 				<h4>{tagline}</h4>
 				<p>
-					<span class="abv">ABV: {abv}</span>
+					<span className="abv">ABV: {abv}</span>
 					{description}
 				</p>
 			</div>
 			<p
-				class="like"
+				className="like"
 				onClick={() => {
 					like ? setLike(false) : setLike(true);
 				}}
